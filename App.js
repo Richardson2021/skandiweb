@@ -2,7 +2,7 @@ import React from "react";
 import data from "./data.json";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
-import Details from "./components/Details";
+
 
 
 
@@ -16,13 +16,6 @@ class App extends React.Component {
       sort: "",
     };
   }
-  removeFromCart = (product) => 
-  const cartItems = this.state.cartItems.slice();
-  this.setState({
-    cartItems: cartItems.filter(x=>x._id !== product._id),});
-  
-
-
   addToCart =(product) => {
     const cartItems = this.state.cartItems.slice();
     let alreadyInCart = false
@@ -63,10 +56,9 @@ class App extends React.Component {
         <div className="content">
           <div className="main">
             <Products products={this.state.products} addToCart={this.addToCart}></Products>
-
             </div>
           <div className="sidebar">
-            <Cart cartItems={this.state.cartItems} removeFromCart={this.removeFromCart} /></div>
+            <Cart cartItems={this.state.cartItems} /></div>
         </div>
       </main>
       <footer></footer>
@@ -75,4 +67,55 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
